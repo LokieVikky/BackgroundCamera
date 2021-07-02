@@ -124,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
                         ByteBuffer buffer = planeProxy.getBuffer();
                         byte[] bytes = new byte[buffer.remaining()];
                         buffer.get(bytes);
+
+                        // This is the captured Image
                         Bitmap bMap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                         Log.d(TAG, "onCaptureSuccess: ");
                     }
